@@ -1,0 +1,403 @@
+/* Basic changes for the website */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #00ADB5;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px auto 12px;
+}
+
+h4 {
+    text-align: center;
+    margin: 0px auto 50px;
+    color: #393E46;
+}
+
+/* Form is used as search bar */
+form {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    height: 60px;
+    background-color: #222831;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+/* Form search bar input */
+form input {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 0px 30px;
+}
+
+/* Form search button */
+form button {
+    padding: 0px 40px;
+    height: 100%;
+    background: #ff5900;
+    color: #ffffff;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+
+/* Show more button to load more images */
+#show-more-btn {
+    background: #ff5900;
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin: 20px auto 100px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Searched results  */
+#search-result {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+/* New Images result */
+#list-new-result {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+/* Main Image */
+#mainImage {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* searched result  container*/
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* user profile */
+.user_profile {
+    display: flex;
+    margin-top: 6px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 8px;
+}
+
+.user_profile h3 {
+    color: #222831;
+    font-size: 0.8rem;
+}
+
+.profileImageDiv {
+    height: 40px;
+    width: 40px;
+}
+
+.profileImageDiv img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* User Info*/
+.user_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Download button */
+.downloadDiv {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.download-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #222831;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #ff4500;
+}
+
+/* Featured Keywords */
+#main-screen {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 24px;
+    color: #222831;
+}
+
+#keyword-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+#keyword-list li {
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+#keyword-list a {
+    text-decoration: none;
+    background-color: #393E46;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#keyword-list a:hover {
+    background-color: #222831;
+}
+
+/* Footer section to show the creator details and the resources used */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    padding: 10px;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-section a {
+    color: #00ADB5;
+    text-decoration: none;
+}
+
+/* Media Queries for a responsive design for all screen sizes */
+@media screen and (max-width: 1120px) {
+    form {
+        max-width: 800px;
+    }
+
+    #main-screen {
+        max-width: 700px;
+    }
+
+    #keyword-list {
+        gap: 8px;
+    }
+
+    #search-result,
+    #list-new-result {
+        grid-gap: 28px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    form {
+        max-width: 650px;
+    }
+
+    #main-screen {
+        max-width: 550px;
+    }
+
+    #keyword-list {
+        gap: 6px;
+    }
+
+    #search-result,
+    #list-new-result {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    form {
+        max-width: 550px;
+    }
+
+    #main-screen {
+        max-width: 450px;
+    }
+
+    #keyword-list {
+        gap: 4px;
+    }
+
+    #keyword-list a {
+        padding: 6px 13px;
+    }
+
+    #search-result,
+    #list-new-result {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 18px;
+    }
+
+    .download-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .profileImageDiv {
+        height: 30px;
+        width: 30px;
+    }
+
+    .user_profile h3 {
+        font-size: 0.7rem;
+    }
+
+    #mainImage {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    form {
+        max-width: 400px;
+        height: 50px;
+    }
+
+    form input {
+        height: 100%;
+        font-size: 12px;
+    }
+
+    form button {
+        font-size: 12px;
+    }
+
+    #main-screen {
+        max-width: 300px;
+    }
+
+    #keyword-list {
+        gap: 2px;
+    }
+
+    #keyword-list a {
+        padding: 4px 10px;
+    }
+
+    #search-result,
+    #list-new-result {
+        grid-template-columns: 1fr;
+        grid-gap: 18px;
+    }
+
+    .download-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .profileImageDiv {
+        height: 30px;
+        width: 30px;
+    }
+
+    .user_profile h3 {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    form {
+        max-width: 280px;
+        height: 50px;
+    }
+
+    form input {
+        height: 100%;
+        font-size: 12px;
+        padding: 0px 15px;
+    }
+
+    form button {
+        font-size: 12px;
+        padding: 0px 20px;
+    }
+
+    #main-screen {
+        max-width: 250px;
+    }
+
+    #keyword-list {
+        gap: 2px;
+        justify-content: space-around;
+    }
+
+    #keyword-list a {
+        padding: 4px 10px;
+    }
+
+    #search-result,
+    #list-new-result {
+        grid-template-columns: 1fr;
+        grid-gap: 16px;
+    }
+
+    .download-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .profileImageDiv {
+        height: 30px;
+        width: 30px;
+    }
+
+    .user_profile h3 {
+        font-size: 0.7rem;
+    }
+
+    .footer-section p {
+        font-size: 0.8rem;
+    }
+}

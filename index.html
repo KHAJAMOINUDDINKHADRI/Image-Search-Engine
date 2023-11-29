@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search Engine</title>
+    <meta name="title" content="Image Search Engine">
+    <meta name="description"
+        content="It is search engine which provides high quality images from the most powerful image search API in the world, powered by tens of millions of community generated tags and this application is made by Khaja Moinuddin Khadri by using Unsplash Api">
+
+    <!-- CSS style sheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon icon -->
+    <favicon>
+        <link rel="icon" href="search-favicon.ico">
+    </favicon>
+</head>
+
+<body>
+    <!-- Header -->
+    <h1>Image Search Engine</h1>
+    <h4>Stock photos for free from Unsplash</h4>
+
+    <!-- Search bar -->
+    <form id="search-form">
+        <input type="text" id="search-box" placeholder="Search high-quality images">
+        <button>Search</button>
+    </form>
+
+    <!-- Featured keywords -->
+    <div id="main-screen">
+        <h2>Featured :</h2>
+        <ul id="keyword-list">
+            <li><a href="#" onclick="searchByKeyword('architecture')">Architecture</a></li>
+            <li><a href="#" onclick="searchByKeyword('technology')">Technology</a></li>
+            <li><a href="#" onclick="searchByKeyword('business')">Business</a></li>
+            <li><a href="#" onclick="searchByKeyword('landscape')">Landscape</a></li>
+            <li><a href="#" onclick="searchByKeyword('mountains')">Mountains</a></li>
+            <li><a href="#" onclick="searchByKeyword('nature')">Nature</a></li>
+            <li><a href="#" onclick="searchByKeyword('ocean')">Ocean</a></li>
+            <li><a href="#" onclick="searchByKeyword('space')">Space</a></li>
+            <li><a href="#" onclick="searchByKeyword('music')">Music</a></li>
+            <li><a href="#" onclick="searchByKeyword('food')">Food</a></li>
+            <li><a href="#" onclick="searchByKeyword('sports')">Sports</a></li>
+            <li><a href="#" onclick="searchByKeyword('travel')">Travel</a></li>
+        </ul>
+    </div>
+
+    <!-- New Images (Default) -->
+    <div class="list-new-results" id="list-new-result">
+    </div>
+
+    <!-- Searched Images -->
+    <div class="search-results" id="search-result"></div>
+
+    <!-- button to load more images -->
+    <button id="show-more-btn">Show More</button>
+
+    <!-- Footer section shows the creater details -->
+    <footer>
+        <div class="footer-section" id="footer">
+            <p id="footer-1">© 2023 <a href=https://www.linkedin.com/in/khajamoinuddinkhadri />Khaja Moinuddin
+                Khadri.</a> All
+                Rights
+                Reserved.
+            </p>
+            <p id="footer-2">
+                Powered By <a href="https://unsplash.com">Unsplash Api
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript link -->
+    <script src="script.js"></script>
+</body>
+
+</html>
